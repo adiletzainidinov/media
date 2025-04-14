@@ -19,7 +19,7 @@ const FooterContactsDataRu = [
     number: 'Оплата курса',
     icon: 'card-outline', // или любой другой подходящий
     write: 'Оплатить курс',
-    url: 'https://details-zeta.vercel.app/', // ← Укажи реальную ссылку
+    url: 'https://pay-course.vercel.app/', // ← Укажи реальную ссылку
   },
 ];
 
