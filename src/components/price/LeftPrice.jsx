@@ -3,21 +3,21 @@ import { ContainerLeftBox, LinePrice, TextIcon } from './PriceStyle';
 import { useSelector } from 'react-redux';
 
 const DataTextIcon = [
-  { id: 1, icon: 'play-circle', textKey: 'safe_content' },
-  { id: 2, icon: 'shield-checkmark', textKey: 'halal_control' },
-  { id: 3, icon: 'happy', textKey: 'child_friendly' },
-  { id: 4, icon: 'book', textKey: 'educational' },
-  { id: 5, icon: 'time', textKey: 'time_control' },
-  { id: 6, icon: 'chatbubbles', textKey: 'parent_community' },
-  { id: 7, icon: 'gift', textKey: 'free_access' },
-  { id: 8, icon: 'globe', textKey: 'multilingual' },
-  { id: 9, icon: 'people', textKey: 'family_friendly' },
-  { id: 10, icon: 'heart', textKey: 'support_us' },
+  { id: 1, icon: 'create', textKey: 'safe_content' },            // создание контента
+  { id: 2, icon: 'shield-checkmark', textKey: 'halal_control' }, // халяль проверка
+  { id: 3, icon: 'happy', textKey: 'child_friendly' },           // детский стиль
+  { id: 4, icon: 'bulb', textKey: 'educational' },               // GPT, идеи
+  { id: 5, icon: 'time', textKey: 'time_control' },              // тайминг, график
+  { id: 6, icon: 'chatbubbles', textKey: 'parent_community' },   // общение, поддержка
+  { id: 7, icon: 'gift', textKey: 'free_access' },               // бонусы, доступ
+  { id: 8, icon: 'language', textKey: 'multilingual' },          // мультиязычность
+  { id: 9, icon: 'home', textKey: 'family_friendly' },           // семейный подход
+  { id: 10, icon: 'heart-circle', textKey: 'support_us' },       // помощь, садака
 ];
+
 
 const LeftPrice = () => {
   const { languageStore } = useSelector((state) => state.umra);
-  const scrollfooterContacts = () => document.getElementById('footerContacts')?.scrollIntoView({ behavior: 'smooth' });
 
   // Мультиязычный контент
   const textContent = languageStore
@@ -35,25 +35,19 @@ const LeftPrice = () => {
         support_us: 'Бизди колдоо үчүн кайрымдуулук мүмкүнчүлүктөрү',
       }
     : {
-        header: 'Особенности нашей платформы:',
-        safe_content: 'Безопасный видеоконтент для детей',
-        halal_control: 'Прошедший проверку на Безопасность',
-        child_friendly: 'Интерфейс, удобный для детей',
-        educational: 'Образовательные и религиозные материалы',
-        time_control: 'Функция ограничения времени просмотра',
-        parent_community: 'Поддержка и общение для родителей',
-        free_access: 'Бесплатные и доступные видео',
-        multilingual: 'Контент на нескольких языках',
-        family_friendly: 'Семейный контент',
+        header: 'Что ты получишь от этого курса:',
+        safe_content: 'Умение создавать халяльный и полезный контент',
+        halal_control: 'Навык фильтрации и подбора исламских материалов',
+        child_friendly: 'Создание добрых и понятных видео',
+        educational: 'Работа с AI (GPT) для генерации идей и сценариев',
+        time_control: 'Умение выстроить стабильный контент-план',
+        parent_community: 'Чат-поддержка и наставничество каждый день',
+        free_access: 'Доступ ко всем материалам и шаблонам курса',
+        multilingual: 'Навыки адаптации контента под разную аудиторию',
+        family_friendly: 'Создание видео, которые смотрят всей семьёй',
         support_us: (
           <>
-            Возможность поддержать проект{" "} <br />
-            <span
-              style={{ color: '#007bff', cursor: 'pointer' }}
-              onClick={scrollfooterContacts}
-            >
-              Перейти
-            </span>
+            Делая контент, ты совершаешь садака джария <br />
           </>
         ),
       };

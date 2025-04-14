@@ -5,7 +5,7 @@ const RightDocuments = () => {
     <>
       <RightContainer>
         <img
-          src="https://i.pinimg.com/736x/98/1c/30/981c301c8ca08a523493befd04cffd76.jpg"
+          src="https://i.pinimg.com/736x/25/67/47/2567474bca63567defc0ebe6e784722e.jpg"
           alt=""
         />
       </RightContainer>

@@ -1,4 +1,3 @@
-import { scrollToElement } from '../../utils/shared/scrollUtils';
 import {
   DocumentsSome,
   LeftContainer,
@@ -8,38 +7,39 @@ import { useSelector } from 'react-redux';
 
 const translations = {
   ru: {
-    title: 'Для запуска проекта нам необходима ваша поддержка',
+    title: 'Что вас ждёт на курсе',
     data: [
       {
         id: 1,
-        icon: 'cash-outline',
-        title: 'Финансирование проекта',
+        icon: 'play-circle-outline',
+        title: '60 видео за 1 месяц',
         subTitle:
-          'Для создания платформы требуется 100 000$. Ваш вклад поможет сделать контент доступным и безопасным!',
+          'Вы создадите 60 исламских видеороликов, которые реально выйдут на канале muslimkids.media и принесут миллионы просмотров.',
       },
       {
         id: 2,
-        icon: 'brush-outline',
-        title: 'Требуются дизайнеры (Figma)',
+        icon: 'cut-outline',
+        title: 'Обучение монтажу в InShot',
         subTitle:
-          'Мы ищем волонтёров-дизайнеров, готовых помочь с созданием интерфейса и визуального стиля проекта.',
+          'Мы научим вас работать в простом и удобном редакторе InShot. Даже если вы никогда не монтировали — вы справитесь!',
       },
       {
         id: 3,
-        icon: 'cut-outline',
-        title: 'Волонтёры-монтажёры',
+        icon: 'bulb-outline',
+        title: 'Работа с GPT и сценариями',
         subTitle:
-          'Если у вас есть навыки видеомонтажа, присоединяйтесь! Нам нужны люди, готовые помочь в обработке видео.',
+          'Вы научитесь использовать ChatGPT для генерации идей, написания текстов и сценариев, что упростит весь процесс.',
       },
       {
         id: 4,
-        icon: 'heart-outline',
-        title: 'Любая помощь важна',
+        icon: 'chatbox-ellipses-outline',
+        title: 'Поддержка и сообщество',
         subTitle:
-          'Можете помочь другим способом? Напишите нам! Давайте вместе создадим полезный контент для детей.',
+          'Каждый день — задания, проверка, разбор. А в Telegram вы получите поддержку, ответы и мотивацию от меня лично.',
       },
     ],
   },
+
   ky: {
     title: 'Долбоорду ишке ашыруу үчүн сиздин колдооңуз керек',
     data: [
@@ -78,8 +78,6 @@ const translations = {
 const LeftDocuments = () => {
   const { languageStore } = useSelector((state) => state.umra);
   const lang = languageStore ? translations.ky : translations.ru; // Показываем кыргызский, если languageStore = true, и русский, если false
-  const scrollfooterContacts = () => scrollToElement('footerContacts');
-
 
   return (
     <LeftContainer>
@@ -90,9 +88,9 @@ const LeftDocuments = () => {
             <div className="icons">
               <ion-icon name={item.icon}></ion-icon>
             </div>
-            <h2>{item.title}</h2>
+            <h2 style={{ textAlign: 'center' }}>{item.title}</h2>
             <p>
-              {item.subTitle} <br /> <span style={{ color: '#007bff' }} onClick={scrollfooterContacts}>Поддержать</span>
+              {item.subTitle} <br />
             </p>
           </DocumentsSome>
         ))}

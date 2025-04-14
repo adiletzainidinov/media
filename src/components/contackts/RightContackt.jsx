@@ -9,7 +9,7 @@ import { handleSocialClick } from '../../utils/shared/gotuSoccial';
 
 const translations = {
   ru: {
-    buttonText: 'Следите за новыми видео для детей',
+    buttonText: 'Мы в в соцсетях',
   },
   ky: {
     buttonText: 'Балдар үчүн жаңы халал видеолордон кабардар болуңуз',

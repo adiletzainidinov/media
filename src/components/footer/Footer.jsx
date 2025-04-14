@@ -11,20 +11,21 @@ const Footer = () => {
   const { languageStore } = useSelector((state) => state.umra); // Получаем язык из состояния
   const scrollToHome = () => scrollToElement('home');
   const scrollToPrice = () => scrollToElement('priceSection');
-  const scrollToContacts = () => scrollToElement('scrollToContacts');
+  const scrollToContacts = () => scrollToElement('footerContacts');
 
   const footerData = {
     ru: {
-      companyTitle: 'О нашем проекте',
+      companyTitle: 'О курсе',
       companyDescription:
-        'Наш проект предлагает детям безопасное и познавательное пространство для изучения исламских ценностей через видео и мультимедийный контент. Мы стремимся обеспечить знания о праведной жизни и ценностях, соответствующих Исламу.',
-      usefulLinksTitle: 'Полезные ссылки',
+        'Этот курс обучает созданию исламского контента через нарезку и оформление готовых видео. Мы покажем, как с помощью практики и простых инструментов вы можете продвигать исламские ценности и набрать 50 000 подписчиков.',
+      usefulLinksTitle: 'Навигация',
       home: 'Главная',
-      aboutUs: 'Наша будущая платформа',
-      contacts: 'Контакты',
-      followUsTitle: 'Следите за нами',
-      copyright: 'Сайт создал Адилет',
-    },
+      aboutUs: 'О курсе',
+      contacts: 'Записаться',
+      followUsTitle: 'Мы в соцсетях',
+      copyright: 'Проект разработан Адилетом',
+    }
+,    
     ky: {
       companyTitle: 'Биздин долбоор тууралуу',
       companyDescription:

@@ -10,24 +10,64 @@ import { useSelector } from 'react-redux';
 
 const translations = {
   ru: {
-    ribbon: 'ВСЕ БЕСПЛАТНО',
-    title: 'ПОДПИСКА И ДОСТУП',
-    subTitle: 'Без подписки, открытый доступ',
+    ribbon: 'СТАРТ 1 МАЯ',
+    title: 'СТОИМОСТЬ КУРСА',
+    subTitle: 'Полный курс и поддержка',
     price: 'от',
-    perSystem: 'за весь контент',
-    button: 'СПОНСИРОВАТЬ',
-    footer: 'Внимание! Контент доступен бесплатно!',
+    perSystem: 'за весь период обучения',
+    button: 'ЗАПИСАТЬСЯ',
+    footer: 'До 20 мая — 10 000₽ (50% скидка), до 25 мая — 15 000₽ (25% скидка), после — 20 000₽',
     data: [
-      { id: 1, icon: 'film-outline', text: 'Исламские мультфильмы и многое другое' },
-      { id: 2, icon: 'musical-notes-outline', text: 'Нашиды для детей' },
-      { id: 3, icon: 'star-outline', text: 'Вдохновляющие ролики' },
-      { id: 4, icon: 'planet-outline', text: 'Видео со всего мира' },
-      { id: 5, icon: 'people-outline', text: 'Безопасная среда для детей' },
-      { id: 6, icon: 'chatbox-ellipses-outline', text: 'Советы для родителей' },
-      { id: 7, icon: 'shield-outline', text: 'Фильтр нежелательного контента' },
-      { id: 8, icon: 'flash-outline', text: 'Быстрый доступ к контенту' },
-      { id: 9, icon: 'calendar-outline', text: 'Видео на каждый день' },
-      { id: 10, icon: 'color-wand-outline', text: 'Красочный интерфейс' },
+      {
+        id: 1,
+        icon: 'film-outline',
+        text: 'Создашь 60 видео для канала muslimkids.media',
+      },
+      {
+        id: 2,
+        icon: 'cut-outline',
+        text: 'Научишься монтажу в приложении InShot',
+      },
+      {
+        id: 3,
+        icon: 'link-outline',
+        text: 'Получишь подборку полезных шаблонов и ссылок для CapCut',
+      },
+      {
+        id: 4,
+        icon: 'bulb-outline',
+        text: 'Освоишь генерацию идей и сценариев с помощью GPT',
+      },
+      {
+        id: 5,
+        icon: 'school-outline',
+        text: 'Поймёшь, как обучать и вдохновлять через контент',
+      },
+      {
+        id: 6,
+        icon: 'earth-outline',
+        text: 'Сделаешь контент, понятный умме по всему миру',
+      },
+      {
+        id: 7,
+        icon: 'people-outline',
+        text: 'Создашь халяльный, семейный и детский контент',
+      },
+      {
+        id: 8,
+        icon: 'chatbox-ellipses-outline',
+        text: 'Будешь в группе с поддержкой и разбором заданий',
+      },
+      {
+        id: 9,
+        icon: 'shield-checkmark-outline',
+        text: 'Научишься фильтровать и проверять контент',
+      },
+      {
+        id: 10,
+        icon: 'rocket-outline',
+        text: 'Настроишь контент-план и начнёшь путь к 50 000 подписчиков',
+      },
     ],
   },
   ky: {
@@ -44,7 +84,11 @@ const translations = {
       { id: 3, icon: 'star-outline', text: 'Шык берүүчү окуялар' },
       { id: 4, icon: 'time-outline', text: 'Көрүү убактысын чектөө' },
       { id: 5, icon: 'people-outline', text: 'Балдар үчүн коопсуз чөйрө' },
-      { id: 6, icon: 'chatbox-ellipses-outline', text: 'Ата-энелерге кеңештер' },
+      {
+        id: 6,
+        icon: 'chatbox-ellipses-outline',
+        text: 'Ата-энелерге кеңештер',
+      },
       { id: 7, icon: 'shield-outline', text: 'Керексиз контентти чыпкалоо' },
       { id: 8, icon: 'language-outline', text: 'Көп тилдүү видео' },
       { id: 9, icon: 'gift-outline', text: 'Акысыз жеткиликтүү' },
@@ -64,7 +108,7 @@ const RightPrice = () => {
       <h2>{lang.title}</h2>
       <p>{lang.subTitle}</p>
       <h3>
-        <span>{lang.price} </span>0<span className="dollar">$</span>
+        <span> </span>20 000<span className="dollar">рубль</span>
       </h3>
       <h4>{lang.perSystem}</h4>
       {lang.data.map((item) => (
@@ -78,7 +122,9 @@ const RightPrice = () => {
           <LineRightPrice></LineRightPrice>
         </InformationRight>
       ))}
-      <ButtonRightPrice onClick={scrollfooterContacts}>{lang.button}</ButtonRightPrice>
+      <ButtonRightPrice onClick={scrollfooterContacts}>
+        {lang.button}
+      </ButtonRightPrice>
       <FooterTextRightPrice>{lang.footer}</FooterTextRightPrice>
     </CardRightPrice>
   );

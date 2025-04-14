@@ -166,7 +166,6 @@ export const CardRightPrice = styled(Card)(() => ({
   position: 'relative',
   color: '#fff',
   textAlign: 'center',
-
   '& h2': {
     fontSize: '30px',
     fontWeight: 700,
@@ -323,15 +322,19 @@ export const LineRightPrice = styled('div')(() => ({
 
 export const ButtonRightPrice = styled(Button)(() => ({
   marginTop: 20,
-  marginBottom: 20,
+  marginBottom: 50,
   paddingLeft: '50px',
   paddingRight: '50px',
 }));
 
 export const FooterTextRightPrice = styled('h5')(() => ({
-  marginBottom: 30,
   color: '#9c9c9c',
   fontWeight: 300,
+  width: '100%',
+  maxWidth: '300px',
+  margin: '0 auto',
+  position: 'relative',
+  top: -20,
 }));
 
 // blueBox
@@ -381,7 +384,6 @@ export const PartnerBox = styled('h5')(() => ({
     marginRight: 120,
     marginLeft: 0,
   },
-
 }));
 
 export const WaveBox = styled('div')(() => ({

@@ -7,35 +7,33 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { MdLanguage } from 'react-icons/md';
-import { useDispatch, useSelector } from 'react-redux';
+// import { MdLanguage } from 'react-icons/md';
+// import { useDispatch } from 'react-redux';
 import MailIcon from '@mui/icons-material/Mail';
-import { GoSingleSelect } from 'react-icons/go';
-import { useState } from 'react';
-import { BurgerOpen } from '../headerStyle';
-import { languageFalse, languageTrue } from '../../../store/slices/umra-slice/umraSlice';
-import Button from '../../../shared/UI/button/Button';
+// import { GoSingleSelect } from 'react-icons/go';
+// import { useState } from 'react';
+// import { BurgerOpen } from '../headerStyle';
+// import { languageFalse, languageTrue } from '../../../store/slices/umra-slice/umraSlice';
+// import Button from '../../../shared/UI/button/Button';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import PropTypes from 'prop-types';
 
-
-
 const ListSideBar = ({ anchor }) => {
-  const dispatch = useDispatch();
-  const { languageStore } = useSelector((state) => state.umra);
-  const [language, setLanguage] = useState(false);
+  // const dispatch = useDispatch();
+  // const { languageStore } = useSelector((state) => state.umra);
+  // const [language, setLanguage] = useState(false);
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => !prev);
-  };
+  // const toggleLanguage = () => {
+  //   setLanguage((prev) => !prev);
+  // };
 
-  const handleLanguageTrue = () => {
-    dispatch(languageTrue());
-  };
+  // const handleLanguageTrue = () => {
+  //   dispatch(languageTrue());
+  // };
 
-  const handleLanguageFalse = () => {
-    dispatch(languageFalse());
-  };
+  // const handleLanguageFalse = () => {
+  //   dispatch(languageFalse());
+  // };
 
   return (
     <>
@@ -43,7 +41,7 @@ const ListSideBar = ({ anchor }) => {
         sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
         role="presentation"
       >
-        <List>
+        {/* <List>
           {[languageStore ? 'Кыргызча' : 'Русский'].map((text, index) => (
             <ListItem
               style={{ position: 'relative' }}
@@ -102,7 +100,7 @@ const ListSideBar = ({ anchor }) => {
               )}
             </ListItem>
           ))}
-        </List>
+        </List> */}
         <Divider />
         <List>
           {['All mail'].map((text, index) => (
@@ -123,7 +121,6 @@ const ListSideBar = ({ anchor }) => {
 
 export default ListSideBar;
 
-
 ListSideBar.propTypes = {
-    anchor: PropTypes.oneOf(['left', 'right', 'top', 'bottom']).isRequired,
-  };
+  anchor: PropTypes.oneOf(['left', 'right', 'top', 'bottom']).isRequired,
+};

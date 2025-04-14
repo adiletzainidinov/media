@@ -16,10 +16,10 @@ import { FaHandHoldingHeart } from 'react-icons/fa';
 const FooterContactsDataRu = [
   {
     id: 1,
-    number: 'Наш сайт для поддежки',
-    icon: 'link',
-    write: 'перейти',
-    url: 'https://details-zeta.vercel.app/',
+    number: 'Оплата курса',
+    icon: 'card-outline', // или любой другой подходящий
+    write: 'Оплатить курс',
+    url: 'https://details-zeta.vercel.app/', // ← Укажи реальную ссылку
   },
 ];
 
@@ -51,12 +51,14 @@ const FooterContacts = () => {
       <StyledBox>
         <BoxContainer>
           <h2 style={{ fontSize: 45 }}>
-            {languageStore ? 'Контакттар' : 'Как вы можете поддержать нас?'}
+            {languageStore ? 'Катталуу' : 'Как оплатить участие в курсе?'}
           </h2>
+
           <StyledText>
-            Переходите по ссылке и <span>помогите</span> нам сделать больше
-            добра
+            Переходите по ссылке ниже и <span>оплатите</span> курс, чтобы начать
+            обучение
           </StyledText>
+
           <PapaLeftRightFooter>
             {lang.map((item) => (
               <LeftContactsFooter

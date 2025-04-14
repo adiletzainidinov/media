@@ -32,7 +32,7 @@ export const Overlay = styled('div')(() => ({
 export const Background = styled('div')(() => ({
   width: '100%',
   height: '100%',
-  backgroundImage: `url('https://i.pinimg.com/736x/c2/4a/a5/c24aa5be658f2f1aecdf55ca9bd7924d.jpg')`,
+  backgroundImage: `url('https://i.pinimg.com/736x/f6/cb/03/f6cb037c2b7470108728ac0d3c7076b0.jpg')`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',

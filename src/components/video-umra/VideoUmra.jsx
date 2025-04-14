@@ -1,25 +1,30 @@
 import { useSelector } from 'react-redux';
-import { Container, StyledBox, Overlay, Background, TextContainer } from './VideoUmraStyle';
-import { scrollToElement } from '../../utils/shared/scrollUtils';
+import {
+  Container,
+  StyledBox,
+  Overlay,
+  Background,
+  TextContainer,
+} from './VideoUmraStyle';
 
 const VideoPlatform = () => {
   const { languageStore } = useSelector((state) => state.umra);
-  const scrollfooterContacts = () => scrollToElement('footerContacts');
-
 
   // Мультиязычный текст
   const textContent = languageStore
     ? {
-        title: 'Туура <span className="world">билим</span> — балдарыңыздын ийгиликтүү келечегинин кепилдиги',
+        title:
+          'Туура <span className="world">билим</span> — балдарыңыздын ийгиликтүү келечегинин кепилдиги',
         description:
           '«Эгерде бала туура тарбия жана адал билим алса, анын келечеги нурдуу болот. Биздин платформанын максаты — Ислам баалуулуктарына шайкеш, коопсуз жана пайдалуу контент менен балдарды камсыз кылуу».',
         footer: 'Балдарыңыз үчүн адал жана коопсуз контент',
       }
     : {
-        title: 'Правильные <span className="world">видео</span> — залог светлого будущего ваших детей',
+        title:
+          'Создавай <span className="world">контент</span> с вечной наградой',
         description:
-          `Лучшее, что может оставить человек после себя — это непрекращающаяся милостыня, полезные знания и праведный ребенок, который молится за него.`,
-        footer: '(Муслим)"Смысл"',
+          'Каждое полезное видео — это живая милостыня. Стань тем, кто несёт свет через экран.',
+        footer: 'Смысл хадиса Пророка ﷺ',
       };
 
   return (
@@ -29,7 +34,9 @@ const VideoPlatform = () => {
         <Overlay />
         <TextContainer>
           <h1 dangerouslySetInnerHTML={{ __html: textContent.title }} />
-          <p>{textContent.description}  <br />  <span style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Поддержать</span></p>
+          <p>
+            {textContent.description} <br />{' '}
+          </p>
           <p className="tirmizi">{textContent.footer}</p>
         </TextContainer>
       </StyledBox>

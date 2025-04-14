@@ -1,11 +1,10 @@
-import { scrollToElement } from '../../utils/shared/scrollUtils';
 import { ContacktsLeftBox } from './ContacktsStyle';
 import { useSelector } from 'react-redux';
 
 const translations = {
   ru: {
-    subtitle: '«Чистый контент — спокойствие для родителей»',
-    title: '«Дарите детям безопасные знания и радость без запретного»',
+    subtitle: '«Каждое видео — это возможность изменить чью-то жизнь»',
+    title: '«Стань тем, кто создаёт контент с пользой и смыслом»',
   },
   ky: {
     subtitle: '«Таза контент — ата-энелер үчүн тынчтык»',
@@ -16,19 +15,12 @@ const translations = {
 const LeftContact = () => {
   const { languageStore } = useSelector((state) => state.umra);
   const lang = languageStore ? translations.ky : translations.ru;
-  const scrollfooterContacts = () => scrollToElement('footerContacts');
 
   return (
     <ContacktsLeftBox>
       <p>{lang.subtitle}</p>
       <h2>
         {lang.title} <br />{' '}
-        <span
-          style={{ color: '#007bff', cursor: 'pointer', fontSize: '20px' }}
-          onClick={scrollfooterContacts}
-        >
-          Поддержать
-        </span>
       </h2>
     </ContacktsLeftBox>
   );
